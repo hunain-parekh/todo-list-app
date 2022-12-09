@@ -4,10 +4,10 @@ import './todo-item.css';
 export function TodoItem(props){
     return(
         <>
-            <li key={props.id} className="todo-item">
+            <li className="todo-item">
                 <div className='item-header'>
                     <i className="fa-regular fa-pen-to-square"></i>
-                    <i className="fa-sharp fa-solid fa-trash"></i>
+                    <i className="fa-sharp fa-solid fa-trash" onClick={()=> {props.deleteItem(props.id)}}></i>
                 </div>
                 <h5>{props.title}</h5>
                 <p className='desc'>{props.desc}</p>

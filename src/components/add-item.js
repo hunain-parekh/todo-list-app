@@ -1,12 +1,9 @@
 import './add-item.css';
 
 export function AddItem({addItem}){
-    function handleAddItem(e){
-        addItem(e);
-    }
     return(
         <div className='main-form'>
-            <form onSubmit={handleAddItem}>
+            <form onSubmit={(e)=> addItem(e)}>
             <div className='form-header'>
                 ADD ITEM
             </div>
