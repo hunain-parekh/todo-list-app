@@ -1,0 +1,42 @@
+.todo-list{
+    list-style: none;
+    display: flex;
+}
+
+.list-header{
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 0px 10px 30px;
+    justify-content: center;
+}
+
+.list-header h3{
+    color: bisque;
+    font-size: 25px;
+}
+
+.list{
+    border: 3px solid brown;
+    border-radius: 10px;
+    padding: 0px 0px 10px 0px;
+}
+
+.add-btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: brown;
+    color: bisque;
+    border: 2px solid brown;
+}
+
+.add-btn:hover{
+    background-color: bisque;
+    border-color:brown;
+    color: brown;
+}
