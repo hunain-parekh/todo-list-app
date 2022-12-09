@@ -3,12 +3,12 @@ import './todo-list.css';
 
 export function TodoList(){
     const list = [{
-        title:"my item 1",
-        desc : "this is my item 2 desc",
+        title:"My item 1",
+        desc : "this is my item 2 desc this is my item 2 desc this is my item 2 desc this is my item 2 desc",
         due_date : "12-10-2022"
     },{
-        title:"my item 2",
-        desc : "this is my item 2 desc",
+        title:"My item 2",
+        desc : "this is my item 2 desc this is my item 2 desc this is my item 2 desc this is my item 2 desc",
         due_date : "12-10-2022"
     }];
     const todo_list = list.map(item=> <TodoItem id={item} title={item.title} desc={item.desc} due_date={item.due_date}/>);

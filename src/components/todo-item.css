@@ -1,5 +1,42 @@
 .todo-item{
-    border: 2px solid black;
+    border: 2px solid brown;
     width: 400px;
     margin: 10px;
+    border-radius: 10px;
+    color: brown;
 }
+
+.todo-item h5{
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.todo-item .desc{
+    margin: 5px;
+    text-align: justify;
+}
+
+.todo-item .due-date{
+    margin: 5px;
+    text-align: end;
+    font-weight: bold;
+}
+
+.todo-item .item-header{
+    background-color: brown;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.todo-item .item-header i{
+    margin: 5px;
+    font-size: 20px;
+    color: bisque;
+    cursor: pointer;
+}
+
