@@ -1,9 +1,9 @@
 .todo-item{
     border: 2px solid brown;
-    width: 400px;
     margin: 10px;
     border-radius: 10px;
     color: brown;
+    width: 425px;
 }
 
 .todo-item h5{
