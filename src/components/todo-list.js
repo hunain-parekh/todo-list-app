@@ -28,22 +28,21 @@ export function TodoList(){
     function handleEditItem(e){
         e.preventDefault();
         let index = e.target.id.value;
+        console.log(index);
         let newList = todoList;
-        newList[index].title = e.target.title.value;
-        newList[index].desc = e.target.desc.value;
-        newList[index].due_date = e.target.due_date.value;
+        for(let i =0;i<newList.length;i++){
+            console.log(newList[i].id);
+            if(newList[i].id == index){
+                newList[i].title = e.target.title.value;
+                newList[i].desc = e.target.desc.value;
+                newList[i].due_date = e.target.due_date.value;
+            }
+        }
         setTodoList([...newList]);
     }
 
     function handleDeleteItem(id){
-        let newList = todoList;
-        newList.forEach(e=>{
-            if(e.id === id){
-                let Index = newList.indexOf(e);
-                newList.splice(Index,1);
-            }
-        });
-        setTodoList([...newList]);
+        setTodoList([...todoList.filter(item => item.id !== id)]);
     }
 
     const todo_list = todoList.map(item=> <TodoItem key={item.id} id={item.id} title={item.title} desc={item.desc} due_date={item.due_date} deleteItem={handleDeleteItem} editItem={handleEditItem}/>);

@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import './edit-item.css';
 
-
-
 export function EditItem({editItem,title,desc,due_date,id,handleEditFormView}){
     const [inputValues,setInputValues] = useState({
         title : title,
