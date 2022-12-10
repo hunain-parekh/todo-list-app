@@ -1,6 +1,7 @@
 import './add-item.css';
 
 export function AddItem({addItem,handleAddFormView}){
+    
     return(
         <div className='main-form'>
             <form onSubmit={(e)=> addItem(e)}>

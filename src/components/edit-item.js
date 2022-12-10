@@ -2,11 +2,13 @@ import { useState } from 'react';
 import './edit-item.css';
 
 export function EditItem({editItem,title,desc,due_date,id,handleEditFormView}){
+
     const [inputValues,setInputValues] = useState({
         title : title,
         desc : desc,
         due_date : due_date
     });
+
     function handleTitleInput(e){
         setInputValues(prevDate=>({
             title : e.target.value,
@@ -14,6 +16,7 @@ export function EditItem({editItem,title,desc,due_date,id,handleEditFormView}){
             due_date : prevDate.due_date
         }));
     }
+
     function handleDescInput(e){
         setInputValues(prevDate=>({
             title : prevDate.title,
@@ -21,6 +24,7 @@ export function EditItem({editItem,title,desc,due_date,id,handleEditFormView}){
             due_date : prevDate.due_date
         }));
     }
+
     function handleDateInput(e){
         setInputValues(prevDate=>({
             title : prevDate.title,
@@ -28,6 +32,7 @@ export function EditItem({editItem,title,desc,due_date,id,handleEditFormView}){
             due_date : e.target.value
         }));
     }
+    
     return(
         <div className='main-form'>
             <form onSubmit={(e)=> editItem(e)}>
