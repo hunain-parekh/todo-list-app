@@ -28,17 +28,14 @@ export function TodoList(){
     function handleEditItem(e){
         e.preventDefault();
         let index = e.target.id.value;
-        console.log(index);
-        let newList = todoList;
-        for(let i =0;i<newList.length;i++){
-            console.log(newList[i].id);
-            if(newList[i].id == index){
-                newList[i].title = e.target.title.value;
-                newList[i].desc = e.target.desc.value;
-                newList[i].due_date = e.target.due_date.value;
+        for(let i =0;i<todoList.length;i++){
+            if(todoList[i].id === parseInt(index)){
+                todoList[i].title = e.target.title.value;
+                todoList[i].desc = e.target.desc.value;
+                todoList[i].due_date = e.target.due_date.value;
             }
         }
-        setTodoList([...newList]);
+        setTodoList([...todoList]);
     }
 
     function handleDeleteItem(id){
