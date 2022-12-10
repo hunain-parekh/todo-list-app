@@ -7,7 +7,7 @@ export function TodoList(){
     
     const [viewAddForm,SetViewAddForm] = useState(false);
     const [todoList,setTodoList] = useState([]);
-    const [key,SetKey] = useState(0);
+    const [key,SetKey] = useState(1);
 
     function handleAddFormView(){
         viewAddForm ? SetViewAddForm(false) : SetViewAddForm(true);
