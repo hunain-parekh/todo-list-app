@@ -26,9 +26,7 @@ export function TodoList(){
     }
 
     function handleEditItem(e){
-        e.preventDefault();
-        let index = e.target.id.value;
-        let i = todoList.findIndex(item => item.id === parseInt(index));
+        let i = todoList.findIndex(item => item.id === parseInt(e.target.id.value));
         todoList[i].title = e.target.title.value;
         todoList[i].desc = e.target.desc.value;
         todoList[i].due_date = e.target.due_date.value;

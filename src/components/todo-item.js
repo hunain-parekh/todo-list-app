@@ -12,6 +12,7 @@ export function TodoItem(props){
     }
 
     function sendDataToTodoList(e){
+        e.preventDefault();
         props.editItem(e);
         SetViewEditForm(false);
     }
